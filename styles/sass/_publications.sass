@@ -1,0 +1,81 @@
+.stats-container
+    max-width: 800px
+    margin: 2rem auto
+    padding: 2rem 4rem
+    display: flex
+    justify-content: space-between
+    @include respond(tab-port)
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: .5rem
+
+.stats__item    
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+        max-height: 10rem
+    @include respond(tab-port)
+        &:last-child
+            margin-top: 3rem
+.stats__text
+    margin-left: 2rem
+    span
+        display: block
+        color: white
+        font-size: 2rem
+    
+.publications-container
+    max-width: 1160px
+    margin: auto
+    padding: 1rem
+    // background-color: $color-alt
+
+.publication-item
+    margin: 3rem auto
+    &:first-child
+        margin-top: 0
+    span
+        display: block
+        a
+            margin-left: 1rem
+            color: $color-secondary
+            text-decoration: underline
+
+.publication-item__title
+    display: list-item !important
+    font-size: 2.25rem
+    text-transform: capitalize
+    color: $color-secondary
+    &.normal
+        list-style-type: none
+.publication-item__subtitle
+    font-size: 2.25rem
+    font-style: italic
+    color: white
+
+.publication-item__authors
+    font-size: 2rem
+    color: white
+
+.publication-item__text
+    font-size: 2rem
+    display: inline-block
+    vertical-align: middle
+    color: darken(white, 25%)
+    text-align: justify
+    max-width: 70%
+    margin-top: 1rem
+    min-width: 300px
+    @include respond(tab-land)
+        display: block
+        margin: 2rem auto
+        max-width: 100%
+
+.publication-item__image
+    max-height: 25rem
+    vertical-align: middle
+    margin-left: 2rem
+    @include respond(tab-land)
+        display: none

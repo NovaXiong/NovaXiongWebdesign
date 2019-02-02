@@ -1,0 +1,85 @@
+.research-container
+  max-width: 1360px
+  margin: 3rem auto
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+
+.research-item
+  cursor: pointer
+  position: relative
+  margin: 1.5rem
+  display: block
+  &:hover > .research-item__title
+    min-height: 8.5rem
+
+.research-item__image
+  height: 30rem
+  width: 30rem
+
+.research-item__title
+  position: absolute
+  transition: min-height .2s
+  min-height: 6.5rem
+  display: flex
+  font-size: 2rem
+  text-decoration: none
+  background-color: rgba($color-primary, 0.75)
+  align-items: center
+  text-align: center
+  color: white
+  justify-content: center
+  padding: 1rem 2rem
+  bottom: 0
+  left: 0
+  right: 0
+
+.research__box
+  display: flex
+  justify-content: center
+  max-width: 1160px
+  margin: auto
+  align-items: center
+  padding: 3rem 1rem
+  @include respond(tab-land)
+    flex-direction: column !important
+    align-items: center
+    padding: 3rem 1rem
+    p
+      margin: 0 !important
+      font-size: 1.5rem
+      text-align: justify !important
+  img
+    min-height: 20rem
+    max-height: 20rem
+    min-width: 25rem
+    max-width: 25rem
+  p
+    color: white
+    font-size: 2rem
+    margin-left: 4rem
+    text-align: left
+  &.reverse
+    flex-direction: row-reverse
+    @include respond(tab-land)
+      p
+        margin: 1rem
+        text-align: justify !important
+    p
+      margin-left: 0
+      margin-right: 4rem
+      text-align: right
+    .research__box__title
+      text-align: right
+      margin: 0rem 4rem 1rem 2rem
+
+.research__box__title
+  font-size: 3.5rem
+  display: block
+  margin: 0rem 0 1rem 4rem
+  color: $color-secondary
+  @include respond(tab-land)
+    margin: 2rem 1rem !important
+    text-align: center !important
+    font-size: 3.5rem !important

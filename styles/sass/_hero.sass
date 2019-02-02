@@ -1,0 +1,64 @@
+.hero
+    background: $color-alt
+    display: flex
+    align-items: center
+    justify-content: space-around
+    background-image: linear-gradient(rgba($color-primary, 0.75), rgba($color-primary, 0.75)), url('../img/bg/bg.png')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    transition: min-height .3s
+    min-height: 45rem
+    @include respond(tab-land)
+        min-height: 35rem
+    @include respond(phone)
+        min-height: 25rem
+    &.intranet
+        background-image: linear-gradient(rgba($color-primary, 0.75), rgba($color-primary, 0.75)), url('../img/bg/bg-intranet.png')
+    &.news
+        background-image: linear-gradient(rgba($color-primary, 0.75), rgba($color-primary, 0.75)), url('../img/bg/news-bg.png')
+    &.publications
+        background-image: linear-gradient(rgba($color-primary, 0.75), rgba($color-primary, 0.75)), url('../img/bg/publications-bg.png')
+    &.team
+        background-image: linear-gradient(rgba($color-primary, 0.75), rgba($color-primary, 0.75)), url('../img/team/team.jpg')
+
+.hero__text
+    position: relative
+    white-space: nowrap
+    cursor: default
+
+.hero__title
+    font-size: 7.5rem
+    color: white
+    text-align: center
+    font-weight: normal
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    @include respond(tab-land)
+        font-size: 6rem
+    @include respond(tab-port)
+        font-size: 4rem
+
+.hero__shapes
+    height: auto
+    @include respond(tab-land)
+        height: 25rem
+    @include respond(tab-port)
+        height: 20rem
+    @include respond(phone)
+        display: none
+
+.hero__subtitle
+    font-size: 3rem
+    font-weight: 300
+    color: #eaeaea
+    display: block
+    @include respond(tab-port)
+        font-size: 1.5rem
+
+.text-divider
+    display: none
+    @include respond(tab-port)
+        display: block
